@@ -1,3 +1,30 @@
 #! /usr/bin/env bash
 
 echo "installing languages"
+
+# node
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.40.2/install.sh | bash
+\. "$HOME/.nvm/nvm.sh"
+nvm install 23
+node -v nvm current
+npm -v
+
+# python
+sudo apt install python3 -y
+
+# go
+curl -sL https://go.dev/dl/go1.24.2.linux-amd64.tar.gz --output go.tar.gz
+sudo rm -rf /usr/local/go && 
+sudo tar -C /usr/local -xzf go.tar.gz 
+rm go.tar.gz
+
+# ruby
+sudo apt install ruby -y
+
+# rust
+# add . "$HOME/.cargo/env" to .zshrc
+curl https://sh.rustup.rs -sSf | sh
+
+# ocaml
+sudo apt install opam -y
+
