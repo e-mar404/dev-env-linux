@@ -5,6 +5,10 @@ cmake
 curl
 gcc
 build-essential
+gtk4
+libadwaita
+blueprint-compiler
+pkg-config
 fzf
 zoxide
 tmux

@@ -1,0 +1,8 @@
+#! /usr/bin/env bash
+
+echo "installing ghostty"
+
+git clone https://github.com/ghostty-org/ghostty
+cd ghostty
+zig build -Doptimize=ReleaseFast
+rm -rf ghostty
