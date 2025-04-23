@@ -2,6 +2,9 @@
 
 echo "setting up environment"
 
+sudo apt update && sudo apt upgrade
 sudo apt install zsh git curl stow vim
 chsh -s $(which zsh)
 sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+
+./dev-env
