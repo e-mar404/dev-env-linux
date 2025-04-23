@@ -1,7 +1,10 @@
 coreutils
-cmake
+ninja-build
 gettext
+cmake
+curl
 gcc
+build-essential
 fzf
 zoxide
 tmux

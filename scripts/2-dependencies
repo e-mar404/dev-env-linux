@@ -2,7 +2,7 @@
 
 echo "installing dependencies"
 
-while IFS="\n"; read -r dep; do
+while IFS=$'\n'; read -r dep; do
   sudo apt install $dep
 done < ./scripts/dependencies.txt
 
