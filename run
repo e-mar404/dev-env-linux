@@ -1,0 +1,47 @@
+#! /usr/bin/env bash
+
+script_dir=$(cd $(dirname "${BASH_SOURCE[0]}") && pwd)
+filter=""
+dry=0
+
+cd $script_dir
+scripts=$(find ./scripts -maxdepth 1 -mindepth 1 -type f -regex ".*/[0-9]*-[a-z]*" | sort)
+
+while [[ $# > 0 ]]; do
+	if [[ "$1" == "--dry" ]]; then
+		dry="1"
+	else
+		filter="$1"
+	fi
+
+	shift
+done
+
+log() {
+	if [[ $dry == "1" ]]; then
+		echo "[DRY RUN]: $@"
+	else 
+		echo "$@"
+	fi
+}
+
+execute() {
+	log "==============================================="
+	log "executing: $@"
+
+	if [[ $dry == "1" ]]; then
+		return
+	fi
+
+	$1
+}
+
+for script in $scripts; do
+	if echo "$script" | grep -vq "$filter"; then
+		log "==============================================="
+		log "filtered: -- $script"
+		continue
+	fi	
+
+	execute $script
+done

@@ -1,0 +1,10 @@
+coreutils
+cmake
+gettext
+gcc
+fzf
+zoxide
+tmux
+zsh-completions
+gh
+gpg

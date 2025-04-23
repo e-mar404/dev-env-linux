@@ -1,0 +1,7 @@
+#! /usr/bin/env bash
+
+echo "setting up environment"
+
+sudo apt install zsh git curl stow vim
+chsh -s $(which zsh)
+sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"

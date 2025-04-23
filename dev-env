@@ -1,0 +1,18 @@
+#! /usr/bin/env bash
+
+mkdir ~/backgrounds ~/code ~/personal ~/work ~/plugins ~/projects
+
+git clone https://github.com/e-mar404/.dotfiles ~/.dotfiles
+git clone https://github.com/e-mar404/keyboard ~/keyboard
+
+pushd ~/.dotfiles
+
+configs=$(find . -maxdepth 1 -mindepth 1 -type d \! \( -name ".git" -o -name "skhd" -o -name "yabai" \))
+
+for config in $configs; do
+  stow $(basename $config) -v
+done
+
+cp .zshrc ~/.zshrc
+
+popd
