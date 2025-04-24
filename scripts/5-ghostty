@@ -2,7 +2,8 @@
 
 echo "installing ghostty"
 
-git clone https://github.com/ghostty-org/ghostty
-cd ghostty
-zig build -Doptimize=ReleaseFast
-rm -rf ghostty
+# this is not working yet
+# git clone https://github.com/ghostty-org/ghostty
+# cd ghostty
+# zig build -Doptimize=ReleaseFast
+# rm -rf ghostty

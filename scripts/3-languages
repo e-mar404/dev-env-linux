@@ -14,7 +14,7 @@ sudo apt install python3 -y
 
 # go
 curl -sL https://go.dev/dl/go1.24.2.linux-amd64.tar.gz --output go.tar.gz
-sudo rm -rf /usr/local/go && 
+sudo rm -rf /usr/local/go
 sudo tar -C /usr/local -xzf go.tar.gz 
 rm go.tar.gz
 
@@ -28,3 +28,5 @@ curl https://sh.rustup.rs -sSf | sh
 # ocaml
 sudo apt install opam -y
 
+# zig
+# need zig for ghostty

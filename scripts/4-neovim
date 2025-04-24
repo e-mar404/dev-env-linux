@@ -4,9 +4,10 @@ echo "installing neovim"
 
 sudo rm -rf /usr/local/bin/nvim
 git clone https://github.com/neovim/neovim --depth 1
-cd neovim
-gti checkout stable
+pushd neovim
+git checkout stable
 make CMAKE_BUILD_TYPE=RelWithDebInfo 
 make CMAKE_INSTALL_PREFIX=$HOME/local/bin/nvim
 sudo make install
-rm -rf neovim
+popd
+rm -rf ./neovim

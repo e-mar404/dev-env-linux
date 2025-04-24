@@ -5,8 +5,8 @@ cmake
 curl
 gcc
 build-essential
-gtk4
-libadwaita
+libgtk-4-dev
+libadwaita-1
 blueprint-compiler
 pkg-config
 fzf
@@ -15,3 +15,4 @@ tmux
 zsh-completions
 gh
 gpg
+ripgrep
