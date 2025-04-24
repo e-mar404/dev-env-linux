@@ -3,7 +3,7 @@
 echo "installing dependencies"
 
 while IFS=$'\n'; read -r dep; do
-  sudo apt install $dep
+  sudo apt install $dep -y
 done < ./scripts/dependencies.txt
 
 git clone --depth 1 https://github.com/wbthomason/packer.nvim ~/.local/share/nvim/site/pack/packer/start/packer.nvim
