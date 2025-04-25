@@ -15,4 +15,6 @@ done
 
 cp .zshrc ~/.zshrc
 
+tmux source-file ~/.tmux.conf
+
 popd

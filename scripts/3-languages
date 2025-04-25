@@ -20,6 +20,7 @@ rm go.tar.gz
 
 # ruby
 sudo apt install ruby -y
+sudo apt install ruby-dev -y
 
 # rust
 # add . "$HOME/.cargo/env" to .zshrc
@@ -27,6 +28,8 @@ curl https://sh.rustup.rs -sSf | sh
 
 # ocaml
 sudo apt install opam -y
+opam init
+eval $(opam env --switch=default)
 
 # zig
 # need zig for ghostty
