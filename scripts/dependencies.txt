@@ -6,13 +6,13 @@ curl
 gcc
 build-essential
 libgtk-4-dev
+meson
 libadwaita-1
 blueprint-compiler
 pkg-config
 fzf
 zoxide
 tmux
-zsh-completions
 gh
 gpg
 ripgrep
