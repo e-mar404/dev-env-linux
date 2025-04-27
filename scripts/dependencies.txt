@@ -17,3 +17,4 @@ gh
 gpg
 ripgrep
 snapd
+postman
