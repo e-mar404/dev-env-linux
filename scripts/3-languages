@@ -32,4 +32,7 @@ opam init
 eval $(opam env --switch=default)
 
 # zig
-# need zig for ghostty
+sudo tar -C /usr/local/zig*
+curl -SL https://ziglang.org/download/0.14.0/zig-linux-x86_64-0.14.0.tar.xz -o zig.tar.xz
+sudo tar -C /usr/local -xvf zig.tar.xz
+rm -rf zig.tar.xz

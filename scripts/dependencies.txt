@@ -16,3 +16,4 @@ tmux
 gh
 gpg
 ripgrep
+snapd
