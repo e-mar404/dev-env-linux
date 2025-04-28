@@ -13,7 +13,8 @@ for config in $configs; do
   stow $(basename $config) -v
 done
 
-cp .zshrc ~/.zshrc
+cp .zshrc-linux ~/.zshrc
+source ~/.zshrc
 
 tmux source-file ~/.tmux.conf
 
