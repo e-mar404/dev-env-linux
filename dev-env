@@ -13,6 +13,7 @@ for config in $configs; do
   stow $(basename $config) -v
 done
 
+cp .p10k.zsh ~/.p10k.zsh
 cp .zshrc-linux ~/.zshrc
 source ~/.zshrc
 
